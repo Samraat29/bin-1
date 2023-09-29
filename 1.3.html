@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMRAAT</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>SAMRAAT</h1>
+      <nav>
+        <ul>
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/projects">Projects</a></li>
+          <li><a href="#/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <router-view></router-view>
+  </div>
+
+  <!-- Include Vue.js and Vue Router libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-router@3.5.2/dist/vue-router.js"></script>
+
+  <script>
+    // Define Vue components for each route
+    const Home = { template: '<div><h2>Welcome to My Portfolio</h2></div>' };
+    const About = { template: '<div><h2>About Me</h2><!-- About Me content --></div>' };
+    const Projects = { template: '<div><h2>Projects</h2><!-- Projects content --></div>' };
+    const Contact = { template: '<div><h2>Contact Me</h2><!-- Contact Me content --></div>' };
+
+    // Create a Vue Router instance and configure routes
+    const router = new VueRouter({
+      routes: [
+        { path: '/', component: Home },
+        { path: '/about', component: About },
+        { path: '/projects', component: Projects },
+        { path: '/contact', component: Contact },
+      ],
+    });
+
+    // Create a Vue app instance with the router
+    new Vue({
+      el: '#app',
+      router,
+    });
+  </script>
+  <div style="text-align: center;">
+  <img src="https://media.licdn.com/dms/image/D4D03AQGbzjWLJkQ6rg/profile-displayphoto-shrink_400_400/0/1680826262806?e=1701302400&v=beta&t=KEDUgeIJvKC_vywQ-vWFlIV7lzn1LhLQzDkNrMzdfYY" alt="samraat" width="500" height="600">
+</div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Samraat, an international student from the heart of India, Delhi, currently pursuing a Bachelor of Information Technology in the diverse and vibrant country of Australia. I am deeply passionate about web development and have a robust foundation in C++, HTML, CSS, and JavaScript. My journey in the world of coding is complemented by my proficiency in the German language (A1 level, with a bit of A2), reflecting my love for languages and global communication.
+</p>
+<h2>Web Development</h2>
+<p>In the realm of web development, I am always eager to learn and grow. I have worked on various projects, honing my skills and embracing new technologies. My goal is to create seamless and dynamic websites that provide an exceptional user experience. I am familiar with various tools and frameworks and continuously seek opportunities to enhance my knowledge and expertise</p>
+  
+</section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <h3>Project 1</h3>
+      <a href="https://drive.google.com/file/d/12UtOdtvrTZM2XPOQ5-wwzx0aaDnmt-0A/view?usp=drive_link">project output</a>
+
+    </div>
+    <div class="project">
+      <h3>Project 2</h3>
+       <a href="https://drive.google.com/file/d/1-Iydaxsn1IvRCpUdrAqxSo4VqoXhiU8T/view?usp=sharing">project output</a> 
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>040046998.</p>
+    <p>Samraat121@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Samraat</p>
+  </footer>
+</body>
+</html>
